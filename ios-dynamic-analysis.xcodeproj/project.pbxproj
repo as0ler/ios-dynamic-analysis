@@ -33,7 +33,6 @@
 		0DFC6E471C9F40860030F0C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DFC6E451C9F40860030F0C6 /* Main.storyboard */; };
 		0DFC6E491C9F40860030F0C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DFC6E481C9F40860030F0C6 /* Assets.xcassets */; };
 		0DFC6E4C1C9F40860030F0C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DFC6E4A1C9F40860030F0C6 /* LaunchScreen.storyboard */; };
-		0DFC6E711CA839690030F0C6 /* Security.framework in Sources */ = {isa = PBXBuildFile; fileRef = 0DFC6E6F1CA69D070030F0C6 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -84,7 +83,6 @@
 		0DFC6E481C9F40860030F0C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DFC6E4B1C9F40860030F0C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DFC6E4D1C9F40860030F0C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0DFC6E6F1CA69D070030F0C6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +133,6 @@
 			children = (
 				0DC0737F248515D0009035DF /* Default-568h@2x.png */,
 				0D87E7F723CB611800A42539 /* AppIcon.appiconset */,
-				0DFC6E6F1CA69D070030F0C6 /* Security.framework */,
 				0DFC6E3B1C9F40860030F0C6 /* ios-dynamic-analysis */,
 				0DFC6E3A1C9F40860030F0C6 /* Products */,
 				0D87E82623CB79CF00A42539 /* Frameworks */,
@@ -269,7 +266,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DFC6E711CA839690030F0C6 /* Security.framework in Sources */,
 				0DFC6E441C9F40860030F0C6 /* MainViewController.m in Sources */,
 				0DFC6E411C9F40860030F0C6 /* AppDelegate.m in Sources */,
 				0DEAF133248814D10027CE92 /* Utils.m in Sources */,
@@ -405,12 +401,13 @@
 		0DFC6E671C9F40860030F0C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4PZ7VLN92L;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ios-static-analysis",
+					"$(PROJECT_DIR)/ios-dynamic-analysis",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/ios-dynamic-analysis/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -426,12 +423,13 @@
 		0DFC6E681C9F40860030F0C6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4PZ7VLN92L;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ios-static-analysis",
+					"$(PROJECT_DIR)/ios-dynamic-analysis",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/ios-dynamic-analysis/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;

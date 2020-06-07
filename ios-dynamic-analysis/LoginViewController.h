@@ -18,7 +18,6 @@
 
 - (void)doLogin;
 - (void)storeCredentialsForUsername:(NSString *)username withPassword:(NSString *)password;
-- (void)doLoginForUsername:(NSString *)username withPassword:(NSString *)password;
 - (NSString *)getPathForFilename:(NSString *)filename;
 - (BOOL)isUserValid;
 
