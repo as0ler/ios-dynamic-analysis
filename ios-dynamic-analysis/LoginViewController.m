@@ -189,4 +189,46 @@
     
     [self presentViewController:alert animated:YES completion:nil];
 }
+
+- (void) showAlert:(NSString *)message {
+    
+    UIAlertController *alert = [UIAlertController
+                                alertControllerWithTitle:@"Alert"
+                                message:message
+                                preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* ok = [UIAlertAction
+                         actionWithTitle:@"OK"
+                         style:UIAlertActionStyleDefault
+                         handler:^(UIAlertAction * action)
+                         {
+        [alert dismissViewControllerAnimated:YES completion:nil];
+        
+    }];
+    [alert addAction:ok];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void) changeBgWithColor:(NSString *)color{
+    NSLog(@"Changing background color...");
+    if ([color isEqualToString:@"green"]) {
+        self.view.backgroundColor = [UIColor greenColor];
+    } else if ([ color isEqualToString:@"blue"]) {
+        self.view.backgroundColor = [UIColor blueColor];
+    } else if ([color isEqualToString:@"red"]) {
+        self.view.backgroundColor = [UIColor redColor];
+    } else if ([color isEqualToString:@"black"]) {
+        self.view.backgroundColor = [UIColor blackColor];
+    } else if ([color isEqualToString:@"white"]) {
+        self.view.backgroundColor = [UIColor whiteColor];
+    } else if ([color isEqualToString:@"brown"]) {
+        self.view.backgroundColor = [UIColor brownColor];
+    } else if ([color isEqualToString:@"purple"]) {
+        self.view.backgroundColor = [UIColor purpleColor];
+    }
+    else {
+        self.view.backgroundColor = [UIColor whiteColor];
+    }
+}
+
 @end

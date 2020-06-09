@@ -20,5 +20,7 @@
 - (void)storeCredentialsForUsername:(NSString *)username withPassword:(NSString *)password;
 - (NSString *)getPathForFilename:(NSString *)filename;
 - (BOOL)isUserValid;
+- (void) showAlert:(NSString *)message;
+- (void) changeBgWithColor:(NSString *)color;
 
 @end

@@ -31,6 +31,8 @@
     if ([fileManager fileExistsAtPath:@"/bin/bash"]) {
         [self showAlert:@"Device is Jailbroken :("];
     } else if ([fileManager fileExistsAtPath:@"/bin/ls"]) {
+        [self showAlert:@"Device is Jailbroken :("];
+    } else {
         [self showAlert:@"Device is not Jailbroken. Yay!"];
     }
 }

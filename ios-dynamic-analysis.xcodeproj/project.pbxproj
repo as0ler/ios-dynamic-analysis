@@ -52,8 +52,6 @@
 		0D26525B22AEB3C800F8BFE6 /* logo68.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo68.png; sourceTree = "<group>"; };
 		0D36FEA41EED671A00F23240 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		0D36FEA51EED671A00F23240 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		0D3A3A452485562F008CC1EF /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		0D3A3A4724855637008CC1EF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		0D87E7F823CB611800A42539 /* Icon-App-76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@2x.png"; sourceTree = "<group>"; };
 		0D87E7F923CB611800A42539 /* Icon-App-29x29@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@1x.png"; sourceTree = "<group>"; };
 		0D87E7FA23CB611800A42539 /* Icon-App-40x40@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@1x.png"; sourceTree = "<group>"; };
@@ -119,15 +117,6 @@
 			path = AppIcon.appiconset;
 			sourceTree = "<group>";
 		};
-		0D87E82623CB79CF00A42539 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0D3A3A4724855637008CC1EF /* libz.tbd */,
-				0D3A3A452485562F008CC1EF /* libc++.tbd */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		0DFC6E301C9F40860030F0C6 = {
 			isa = PBXGroup;
 			children = (
@@ -135,7 +124,6 @@
 				0D87E7F723CB611800A42539 /* AppIcon.appiconset */,
 				0DFC6E3B1C9F40860030F0C6 /* ios-dynamic-analysis */,
 				0DFC6E3A1C9F40860030F0C6 /* Products */,
-				0D87E82623CB79CF00A42539 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -412,7 +400,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/ios-dynamic-analysis/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/ios-dynamic-analysis/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.murphy.ios-dynamic-analysis";
 				PRODUCT_NAME = "ios-dynamic-analysis";
 				PROVISIONING_PROFILE = "";
@@ -434,6 +422,10 @@
 				INFOPLIST_FILE = "$(SRCROOT)/ios-dynamic-analysis/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ios-dynamic-analysis/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "me.murphy.ios-dynamic-analysis";
 				PRODUCT_NAME = "ios-dynamic-analysis";
 				PROVISIONING_PROFILE = "";
